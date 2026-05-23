@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const API = axios.create({
-    baseURL: 'https://king-leo58148githubio-production.up.railway.app'
+    baseURL: 'https://king-leo58148githubio-production.up.railway.app/portfolio/'
 })
 
 export const getHero = () => API.get('hero/')

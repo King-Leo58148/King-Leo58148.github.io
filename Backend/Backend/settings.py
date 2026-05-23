@@ -120,6 +120,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+ALLOWED_HOSTS = ['*']
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
+    "https://King-Leo58148.github.io",
+    "https://king-leo58148githubio-production.up.railway.app",
 ]
