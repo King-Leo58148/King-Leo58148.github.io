@@ -127,3 +127,7 @@ CORS_ALLOWED_ORIGINS = [
     "https://king-leo58148.github.io",
     "https://king-leo58148githubio-production.up.railway.app",
 ]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://king-leo58148githubio-production.up.railway.app",
+]
