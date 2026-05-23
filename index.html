@@ -3,208 +3,191 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Louis Aparkwon Sanyenni — Backend Developer</title>
+  <title>Louis Aparkwon Sanyenni</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css" />
-  <meta name="description" content="Portfolio of Louis Aparkwon Sanyenni — Backend Developer specializing in Django, WebSockets, and REST APIs." />
 </head>
 <body>
 
-  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+  <div class="layout">
 
-  <header class="nav-wrap">
-    <nav class="nav container">
-      <a class="logo" href="#hero">Louis.dev</a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-
-    <!-- HERO -->
-    <section id="hero" class="hero container">
-      <div class="hero-inner">
-        <p class="hero-eyebrow">Backend Developer</p>
-        <h1 class="hero-title">Louis <span>Aparkwon</span> Sanyenni</h1>
-        <p class="hero-sub">
-          CS student at KNUST building real-world backend systems —
-          REST APIs, real-time WebSocket applications, and cloud-integrated platforms.
-        </p>
-        <p class="typing-wrap">
-          <span id="typed"></span><span class="cursor"></span>
-        </p>
-        <div class="hero-actions">
-          <a class="btn-primary cta-scroll" href="#projects">See my work</a>
-          <a class="btn-outline" href="mailto:lsanyenni@gmail.com">Get in touch</a>
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <div class="sidebar-top">
+          <h1 class="name">Louis Aparkwon<br>Sanyenni</h1>
+          <h2 class="title">Backend Developer</h2>
+          <p class="tagline">I build clean APIs and real-time systems that work.</p>
+          <nav class="nav">
+            <ul>
+              <li><a href="#about" class="nav-link active"><span class="line"></span>About</a></li>
+              <li><a href="#experience" class="nav-link"><span class="line"></span>Skills</a></li>
+              <li><a href="#projects" class="nav-link"><span class="line"></span>Projects</a></li>
+              <li><a href="#contact" class="nav-link"><span class="line"></span>Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="sidebar-socials">
+          <a href="https://github.com/King-Leo58148" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/louis-sanyenni-08b230348/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="mailto:lsanyenni@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
         </div>
       </div>
-    </section>
+    </aside>
 
-    <!-- ABOUT -->
-    <section id="about" class="section reveal">
-      <div class="container">
-        <p class="section-label">About</p>
-        <h2>Who I am</h2>
-        <div class="about-grid">
-          <div class="about-text">
-            <p>
-              I'm a Computer Science student at <strong>KNUST</strong> who spends more time building than reading about it.
-              My GitHub is where I think out loud — through REST APIs, real-time systems, and cloud-integrated backends built from scratch.
-            </p>
-            <p>
-              My stack is <strong>Python and Django</strong> at the core, with MySQL, PostgreSQL, Redis, and Django REST Framework as daily tools.
-              I'm expanding into <strong>Spring Boot</strong> as I push toward full backend versatility.
-            </p>
-            <p>Always building.</p>
-          </div>
-          <div class="about-stats">
-            <div class="stat-card">
-              <div class="stat-num">4+</div>
-              <div class="stat-label">Projects built</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-num">590+</div>
-              <div class="stat-label">Contributions in 2026</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-num">126</div>
-              <div class="stat-label">Day streak</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-num">100%</div>
-              <div class="stat-label">Python projects</div>
-            </div>
+    <!-- RIGHT CONTENT -->
+    <main class="content">
+
+      <!-- ABOUT -->
+      <section id="about" class="section">
+        <div class="section-label">About</div>
+        <p>
+          I'm a Computer Science student at <span class="highlight">KNUST</span> who spends more time building than reading about it.
+          My GitHub is where I think out loud — through REST APIs, real-time systems, and cloud-integrated backends built from scratch.
+        </p>
+        <p>
+          My projects include a secure photo management API with Cloudinary storage and Redis caching, a real-time group chat system using
+          <span class="highlight">Django Channels and WebSockets</span>, and a collaborative e-commerce backend — all designed with
+          production principles in mind.
+        </p>
+        <p>
+          My stack is <span class="highlight">Python and Django</span> at the core, with MySQL, PostgreSQL, Redis, and
+          Django REST Framework as daily tools. I'm expanding into Spring Boot as I push toward full backend versatility.
+        </p>
+        <p>Always building.</p>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="experience" class="section">
+        <div class="section-label">Skills</div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">Core</div>
+          <div class="skill-list">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Django</span>
+            <span class="skill-tag">Django REST Framework</span>
+            <span class="skill-tag">Django Channels</span>
+            <span class="skill-tag">WebSockets</span>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="section reveal">
-      <div class="container">
-        <p class="section-label">Skills</p>
-        <h2>Tech stack</h2>
-        <div class="skills-grid">
-          <div class="skill"><div class="skill-top"><label>Python</label><span class="skill-pct"></span></div><div class="bar" data-skill="95"><span></span></div></div>
-          <div class="skill"><div class="skill-top"><label>Django</label><span class="skill-pct"></span></div><div class="bar" data-skill="90"><span></span></div></div>
-          <div class="skill"><div class="skill-top"><label>Django REST Framework</label><span class="skill-pct"></span></div><div class="bar" data-skill="88"><span></span></div></div>
-          <div class="skill"><div class="skill-top"><label>Django Channels</label><span class="skill-pct"></span></div><div class="bar" data-skill="80"><span></span></div></div>
-          <div class="skill"><div class="skill-top"><label>WebSockets</label><span class="skill-pct"></span></div><div class="bar" data-skill="82"><span></span></div></div>
-          <div class="skill"><div class="skill-top"><label>MySQL</label><span class="skill-pct"></span></div><div class="bar" data-skill="80"><span></span></div></div>
-          <div class="skill"><div class="skill-top"><label>PostgreSQL</label><span class="skill-pct"></span></div><div class="bar" data-skill="75"><span></span></div></div>
-          <div class="skill"><div class="skill-top"><label>Redis</label><span class="skill-pct"></span></div><div class="bar" data-skill="75"><span></span></div></div>
-          <div class="skill"><div class="skill-top"><label>Cloudinary</label><span class="skill-pct"></span></div><div class="bar" data-skill="70"><span></span></div></div>
-          <div class="skill"><div class="skill-top"><label>Git</label><span class="skill-pct"></span></div><div class="bar" data-skill="90"><span></span></div></div>
-          <div class="skill"><div class="skill-top"><label>Postman</label><span class="skill-pct"></span></div><div class="bar" data-skill="85"><span></span></div></div>
-          <div class="skill"><div class="skill-top"><label>Spring Boot</label><span class="skill-pct"></span></div><div class="bar" data-skill="55"><span></span></div></div>
+        <div class="skill-group">
+          <div class="skill-group-title">Databases</div>
+          <div class="skill-list">
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">Redis</span>
+            <span class="skill-tag">SQLite</span>
+          </div>
         </div>
-      </div>
-    </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section reveal">
-      <div class="container">
-        <p class="section-label">Work</p>
-        <h2>Projects</h2>
-        <div class="projects-grid">
-
-          <article class="card">
-            <div class="card-icon">🔒</div>
-            <h3>Photo Vault</h3>
-            <p>Secure photo management API with signed uploads, album organisation, Redis caching, and Cloudinary cloud storage.</p>
-            <div class="tags">
-              <span class="tag">Django</span>
-              <span class="tag">DRF</span>
-              <span class="tag">MySQL</span>
-              <span class="tag">Cloudinary</span>
-              <span class="tag">Redis</span>
-            </div>
-            <a class="card-link" href="https://github.com/King-Leo58148/Photo_Vault" target="_blank" rel="noopener">View on GitHub →</a>
-          </article>
-
-          <article class="card">
-            <div class="card-icon">💬</div>
-            <h3>Real-Time Chat API</h3>
-            <p>WebSocket-powered group chat with named rooms, live broadcasting, reactions, join/leave notifications, and persistent message history.</p>
-            <div class="tags">
-              <span class="tag">Django Channels</span>
-              <span class="tag">WebSockets</span>
-              <span class="tag">Redis</span>
-              <span class="tag">Django</span>
-            </div>
-            <a class="card-link" href="https://github.com/King-Leo58148/chat_app" target="_blank" rel="noopener">View on GitHub →</a>
-          </article>
-
-          <article class="card">
-            <div class="card-icon">🛒</div>
-            <h3>Campus Market Place</h3>
-            <p>A collaborative e-commerce backend for campus students to buy and sell items, built with REST APIs and PostgreSQL.</p>
-            <div class="tags">
-              <span class="tag">Django</span>
-              <span class="tag">DRF</span>
-              <span class="tag">PostgreSQL</span>
-            </div>
-            <a class="card-link" href="https://github.com/King-Leo58148/Campus_Market_Place" target="_blank" rel="noopener">View on GitHub →</a>
-          </article>
-
-          <article class="card">
-            <div class="card-icon">💰</div>
-            <h3>Expense Manager</h3>
-            <p>Track expenses, generate summary reports, and export CSVs. Clean API design with category filtering and date ranges.</p>
-            <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">Django</span>
-              <span class="tag">MySQL</span>
-            </div>
-            <a class="card-link" href="https://github.com/King-Leo58148/Expense_Manager" target="_blank" rel="noopener">View on GitHub →</a>
-          </article>
-
+        <div class="skill-group">
+          <div class="skill-group-title">Tools & Infrastructure</div>
+          <div class="skill-list">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Postman</span>
+            <span class="skill-tag">Cloudinary</span>
+            <span class="skill-tag">Daphne</span>
+            <span class="skill-tag">Token Auth</span>
+          </div>
         </div>
-      </div>
-    </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section reveal">
-      <div class="container">
-        <p class="section-label">Contact</p>
-        <h2>Get in touch</h2>
-        <div class="contact-grid">
-          <a class="contact-item" href="mailto:lsanyenni@gmail.com">
-            <div class="contact-icon">✉️</div>
-            <div>
-              <div class="contact-label">Email</div>
-              <div class="contact-val">lsanyenni@gmail.com</div>
-            </div>
-          </a>
-          <a class="contact-item" href="https://www.linkedin.com/in/louis-sanyenni-08b230348/" target="_blank" rel="noopener">
-            <div class="contact-icon">🔗</div>
-            <div>
-              <div class="contact-label">LinkedIn</div>
-              <div class="contact-val">Louis Sanyenni</div>
-            </div>
-          </a>
-          <a class="contact-item" href="https://github.com/King-Leo58148" target="_blank" rel="noopener">
-            <div class="contact-icon">💻</div>
-            <div>
-              <div class="contact-label">GitHub</div>
-              <div class="contact-val">King-Leo58148</div>
-            </div>
-          </a>
+        <div class="skill-group">
+          <div class="skill-group-title">Exploring</div>
+          <div class="skill-list">
+            <span class="skill-tag">Spring Boot</span>
+            <span class="skill-tag">Java</span>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-  </main>
+      <!-- PROJECTS -->
+      <section id="projects" class="section">
+        <div class="section-label">Projects</div>
 
-  <footer class="footer">
-    <div class="container">
-      <p>© 2026 Louis Aparkwon Sanyenni — Built from scratch.</p>
-    </div>
-  </footer>
+        <a class="project-card" href="https://github.com/King-Leo58148/Photo_Vault" target="_blank" rel="noopener">
+          <div class="project-top">
+            <div class="project-title">
+              Photo Vault
+              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+            </div>
+            <div class="project-year">2025</div>
+          </div>
+          <p class="project-desc">Secure photo management API with signed uploads, album organisation, Redis caching, and Cloudinary cloud storage. Token authentication with rate limiting.</p>
+          <div class="project-tags">
+            <span>Django</span><span>DRF</span><span>MySQL</span><span>Cloudinary</span><span>Redis</span>
+          </div>
+        </a>
+
+        <a class="project-card" href="https://github.com/King-Leo58148/chat_app" target="_blank" rel="noopener">
+          <div class="project-top">
+            <div class="project-title">
+              Real-Time Chat API
+              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+            </div>
+            <div class="project-year">2026</div>
+          </div>
+          <p class="project-desc">WebSocket-powered group chat with named rooms, live broadcasting, reactions, join/leave notifications, and persistent message history via Django Channels and Redis.</p>
+          <div class="project-tags">
+            <span>Django Channels</span><span>WebSockets</span><span>Redis</span><span>Django</span>
+          </div>
+        </a>
+
+        <a class="project-card" href="https://github.com/King-Leo58148/Campus_Market_Place" target="_blank" rel="noopener">
+          <div class="project-top">
+            <div class="project-title">
+              Campus Market Place
+              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+            </div>
+            <div class="project-year">2025</div>
+          </div>
+          <p class="project-desc">Collaborative e-commerce backend for campus students to buy and sell items. REST API with PostgreSQL, product listings, and user management.</p>
+          <div class="project-tags">
+            <span>Django</span><span>DRF</span><span>PostgreSQL</span>
+          </div>
+        </a>
+
+        <a class="project-card" href="https://github.com/King-Leo58148/Expense_Manager" target="_blank" rel="noopener">
+          <div class="project-top">
+            <div class="project-title">
+              Expense Manager
+              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+            </div>
+            <div class="project-year">2025</div>
+          </div>
+          <p class="project-desc">Track expenses, generate summary reports, and export CSVs. Clean API design with category filtering and date range queries.</p>
+          <div class="project-tags">
+            <span>Python</span><span>Django</span><span>MySQL</span>
+          </div>
+        </a>
+
+        <a class="view-all" href="https://github.com/King-Leo58148" target="_blank" rel="noopener">
+          View full GitHub archive
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+        </a>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+        <div class="section-label">Contact</div>
+        <p>I'm currently open to backend internships and collaboration opportunities. Whether you have a question or just want to say hi, feel free to reach out.</p>
+        <a class="contact-btn" href="mailto:lsanyenni@gmail.com">Say Hello</a>
+      </section>
+
+      <footer class="footer">
+        <p>Designed after <a href="https://brittanychiang.com" target="_blank" rel="noopener">brittanychiang.com</a>. Built by Louis Aparkwon Sanyenni.</p>
+      </footer>
+
+    </main>
+  </div>
 
   <script src="js/script.js"></script>
 </body>
