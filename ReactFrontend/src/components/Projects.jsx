@@ -9,7 +9,9 @@ export default function Projects() {
   }, [])
 
   return (
-    <section id="projects" className="section">
+      <section id="projects" className="section">
+  <div className="section-label">Projects</div>
+  ...
       {projects.map(project => (
         <a
           key={project.id}
