@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { getAbout } from "../api"
 
-export default function About({ hero }) {
+export default function About() {
   const [paragraphs, setParagraphs] = useState([])
   const [loading, setLoading] = useState(true)
 
@@ -33,37 +33,19 @@ export default function About({ hero }) {
   return (
     <section id="about" className="section">
       {loading ? (
-        <div className="about-layout" aria-label="Loading about section">
-          <div className="about-text">
-            <div className="skeleton skeleton-text"></div>
-            <div className="skeleton skeleton-text"></div>
-            <div className="skeleton skeleton-text short"></div>
-            <div className="skeleton skeleton-text" style={{ marginTop: "0.75rem" }}></div>
-            <div className="skeleton skeleton-text short"></div>
-          </div>
-          <div className="about-photo-wrap">
-            <div className="skeleton skeleton-photo"></div>
-          </div>
+        <div aria-label="Loading about section">
+          <div className="skeleton skeleton-text"></div>
+          <div className="skeleton skeleton-text"></div>
+          <div className="skeleton skeleton-text short"></div>
+          <div className="skeleton skeleton-text" style={{ marginTop: "0.75rem" }}></div>
+          <div className="skeleton skeleton-text short"></div>
         </div>
       ) : (
-        <div className={hero?.profile_picture ? "about-layout" : ""}>
-          <div className="about-text">
-            {paragraphs.map(p => (
-              <div key={p.id}>
-                {renderParagraph(p)}
-              </div>
-            ))}
+        paragraphs.map(p => (
+          <div key={p.id}>
+            {renderParagraph(p)}
           </div>
-          {hero?.profile_picture && (
-            <div className="about-photo-wrap">
-              <img
-                src={hero.profile_picture}
-                alt={hero?.name || "Profile"}
-                className="about-photo"
-              />
-            </div>
-          )}
-        </div>
+        ))
       )}
     </section>
   )

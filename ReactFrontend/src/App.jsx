@@ -5,11 +5,27 @@ import Skills from "./components/Skills"
 import Projects from "./components/Projects"
 import Experience from "./components/Experience"
 import Contact from "./components/Contact"
+import DetailedPortfolio from "./components/DetailedPortfolio"
 import { getHero, getContact } from "./api"
 
 export default function App() {
   const [hero, setHero] = useState(null)
   const [contact, setContact] = useState(null)
+  const [detailedView, setDetailedView] = useState(
+    () => window.location.hash === "#full" || new URLSearchParams(window.location.search).get("view") === "full"
+  )
+
+  const openDetailed = () => {
+    window.location.hash = "full"
+    setDetailedView(true)
+    window.scrollTo(0, 0)
+  }
+
+  const openMinimal = () => {
+    history.replaceState(null, "", window.location.pathname)
+    setDetailedView(false)
+    window.scrollTo(0, 0)
+  }
 
   useEffect(() => {
     getHero().then(res => setHero(res.data[0]))
@@ -41,11 +57,15 @@ export default function App() {
     }
   }, [])
 
+  if (detailedView) {
+    return <DetailedPortfolio hero={hero} contact={contact} onBack={openMinimal} />
+  }
+
   return (
     <div className="layout">
-      <Sidebar hero={hero} contact={contact} />
+      <Sidebar hero={hero} contact={contact} onOpenDetailed={openDetailed} />
       <main className="content">
-        <About hero={hero} />
+        <About />
         <Skills />
         <Experience />
         <Projects />

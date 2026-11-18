@@ -1,4 +1,4 @@
-export default function Sidebar({ hero, contact }) {
+export default function Sidebar({ hero, contact, onOpenDetailed }) {
   return (
     <aside className="sidebar">
       <div className="sidebar-inner">
@@ -25,6 +25,13 @@ export default function Sidebar({ hero, contact }) {
               <li><a href="#contact" className="nav-link"><span className="line"></span>Contact</a></li>
             </ul>
           </nav>
+          <button
+            type="button"
+            className="detailed-link-btn"
+            onClick={onOpenDetailed}
+          >
+            View Full Portfolio &rarr;
+          </button>
         </div>
         <div className="sidebar-socials">
           {contact?.github && (

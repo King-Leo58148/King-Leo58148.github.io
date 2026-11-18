@@ -157,6 +157,25 @@ a { color: inherit; text-decoration: none; }
   background: var(--white);
 }
 
+.detailed-link-btn {
+  margin-top: 2rem;
+  align-self: flex-start;
+  background: transparent;
+  border: 1px solid rgba(100,255,218,0.45);
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  padding: 0.55rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 200ms, border-color 200ms;
+}
+
+.detailed-link-btn:hover {
+  background: var(--accent-dim);
+  border-color: var(--accent);
+}
+
 /* SOCIALS */
 .sidebar-socials {
   display: flex;
