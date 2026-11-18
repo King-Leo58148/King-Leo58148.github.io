@@ -12,6 +12,11 @@ class Project(models.Model):
     year = models.CharField(max_length=4)
     tags = models.ManyToManyField(Tag, blank=True)
     github_link = models.URLField(blank=True)
+    order = models.IntegerField(default=0)
+
+    class Meta:
+        ordering = ['-year', 'order', 'id']
+
     def __str__(self):
         return self.title
     

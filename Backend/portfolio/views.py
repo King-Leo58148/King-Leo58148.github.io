@@ -4,7 +4,7 @@ from .serializers import ProjectSerializer, ContactSerializer, SkillSerializer, 
 from rest_framework.generics import ListAPIView
 
 class ProjectList(ListAPIView):
-    queryset = Project.objects.all()
+    queryset = Project.objects.all().order_by('-year', 'order', 'id')
     serializer_class = ProjectSerializer    
 class ContactList(ListAPIView):
     queryset = Contact.objects.all()
