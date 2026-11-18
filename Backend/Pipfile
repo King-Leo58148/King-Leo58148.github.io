@@ -9,6 +9,7 @@ djangorestframework = "*"
 django-cors-headers = "*"
 gunicorn = "*"
 whitenoise = "*"
+pillow = "*"
 
 [dev-packages]
 

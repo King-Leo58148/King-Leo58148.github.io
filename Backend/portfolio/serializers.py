@@ -34,6 +34,18 @@ class AboutSerializer(serializers.ModelSerializer):
         fields = ['id', 'description', 'highlighted_words', 'order']
 
 class HeroSerializer(serializers.ModelSerializer):
+    profile_picture = serializers.SerializerMethodField()
+
     class Meta:
         model = Hero
-        fields = ['id', 'name', 'title', 'tagline']
+        fields = ['id', 'name', 'title', 'tagline', 'profile_picture']
+
+    def get_profile_picture(self, obj):
+        if obj.profile_image_url:
+            return obj.profile_image_url
+        if obj.profile_image:
+            request = self.context.get('request')
+            if request:
+                return request.build_absolute_uri(obj.profile_image.url)
+            return obj.profile_image.url
+        return None

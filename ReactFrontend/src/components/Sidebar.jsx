@@ -3,6 +3,15 @@ export default function Sidebar({ hero, contact }) {
     <aside className="sidebar">
       <div className="sidebar-inner">
         <div className="sidebar-top">
+          {hero?.profile_picture && (
+            <div className="profile-avatar-wrap">
+              <img
+                src={hero.profile_picture}
+                alt={hero?.name || "Profile"}
+                className="profile-avatar"
+              />
+            </div>
+          )}
           <h1 className="name">{hero?.name}</h1>
           <h2 className="title">{hero?.title}</h2>
           <p className="tagline">{hero?.tagline}</p>

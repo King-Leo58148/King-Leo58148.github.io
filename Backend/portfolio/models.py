@@ -59,5 +59,10 @@ class Hero(models.Model):
     name = models.CharField(max_length=100)
     title= models.CharField(max_length=100)
     tagline = models.CharField(max_length=200)
+    profile_image = models.ImageField(upload_to='profile/', blank=True, null=True)
+    profile_image_url = models.URLField(
+        blank=True,
+        help_text='Optional direct image URL (recommended for Render so it persists across redeploys).',
+    )
     def __str__(self):
         return self.name
