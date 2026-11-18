@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const API = axios.create({
-    baseURL: import.meta.env.VITE_API_URL || 'https://king-leo58148-portfolio-api.onrender.com/portfolio/'
+    baseURL: import.meta.env.VITE_API_URL || 'https://king-leo58148-github-io.onrender.com/portfolio/'
 })
 
 export const getHero = () => API.get('hero/')
