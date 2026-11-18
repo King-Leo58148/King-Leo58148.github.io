@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { getAbout } from "../api"
 
-export default function About() {
+export default function About({ hero }) {
   const [paragraphs, setParagraphs] = useState([])
 
   useEffect(() => {
@@ -29,11 +29,24 @@ export default function About() {
 
   return (
     <section id="about" className="section">
-      {paragraphs.map(p => (
-        <div key={p.id}>
-          {renderParagraph(p)}
+      <div className={hero?.profile_picture ? "about-layout" : ""}>
+        <div className="about-text">
+          {paragraphs.map(p => (
+            <div key={p.id}>
+              {renderParagraph(p)}
+            </div>
+          ))}
         </div>
-      ))}
+        {hero?.profile_picture && (
+          <div className="about-photo-wrap">
+            <img
+              src={hero.profile_picture}
+              alt={hero?.name || "Profile"}
+              className="about-photo"
+            />
+          </div>
+        )}
+      </div>
     </section>
   )
 }

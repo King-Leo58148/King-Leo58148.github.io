@@ -45,7 +45,7 @@ export default function App() {
     <div className="layout">
       <Sidebar hero={hero} contact={contact} />
       <main className="content">
-        <About />
+        <About hero={hero} />
         <Skills />
         <Experience />
         <Projects />
