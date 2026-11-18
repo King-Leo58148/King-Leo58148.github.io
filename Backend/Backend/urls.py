@@ -21,6 +21,7 @@ from django.views.static import serve
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('dashboard/', include('portfolio.dashboard_urls')),
     path('portfolio/', include('portfolio.urls')),
     re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
 ]
