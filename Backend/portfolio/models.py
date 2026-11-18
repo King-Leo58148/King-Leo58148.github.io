@@ -24,6 +24,11 @@ class Contact(models.Model):
     github = models.URLField(blank=True)
     linkedin = models.URLField(blank=True)
     email = models.EmailField(blank=True)
+
+    class Meta:
+        verbose_name = "Contact Info"
+        verbose_name_plural = "Contact Info"
+
     def __str__(self):
         return "Contact Information"
     
@@ -52,6 +57,11 @@ class About(models.Model):
     highlighted_words = models.JSONField(default=list, blank=True, null=True)
     order = models.IntegerField(default=0)
 
+    class Meta:
+        verbose_name = "About Paragraph"
+        verbose_name_plural = "About Section"
+        ordering = ['order']
+
     def __str__(self):
         return f"About paragraph {self.order}"
     
@@ -64,5 +74,10 @@ class Hero(models.Model):
         blank=True,
         help_text='Optional direct image URL (recommended for Render so it persists across redeploys).',
     )
+
+    class Meta:
+        verbose_name = "Profile & Hero"
+        verbose_name_plural = "Profile & Hero"
+
     def __str__(self):
         return self.name
