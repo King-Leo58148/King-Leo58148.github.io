@@ -3,9 +3,20 @@ export default function Sidebar({ hero, contact }) {
     <aside className="sidebar">
       <div className="sidebar-inner">
         <div className="sidebar-top">
-          <h1 className="name">{hero?.name}</h1>
-          <h2 className="title">{hero?.title}</h2>
-          <p className="tagline">{hero?.tagline}</p>
+          {!hero ? (
+            <div aria-label="Loading profile">
+              <div className="skeleton skeleton-title"></div>
+              <div className="skeleton skeleton-subtitle"></div>
+              <div className="skeleton skeleton-text"></div>
+              <div className="skeleton skeleton-text short"></div>
+            </div>
+          ) : (
+            <>
+              <h1 className="name">{hero.name}</h1>
+              <h2 className="title">{hero.title}</h2>
+              <p className="tagline">{hero.tagline}</p>
+            </>
+          )}
           <nav className="nav">
             <ul>
               <li><a href="#about" className="nav-link"><span className="line"></span>About</a></li>
