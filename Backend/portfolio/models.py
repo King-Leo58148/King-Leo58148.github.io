@@ -46,7 +46,7 @@ class Skill(models.Model):
 class Experience(models.Model):
     title = models.CharField(max_length=100)
     company = models.CharField(max_length=100)
-    start_date = models.CharField(max_length=4)
+    start_date = models.CharField(max_length=20)
     end_date = models.CharField(max_length=20)
     description = models.TextField()
     def __str__(self):

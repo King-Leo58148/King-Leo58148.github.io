@@ -250,7 +250,7 @@ a { color: inherit; text-decoration: none; }
 /* ── EXPERIENCE ── */
 .experience-card {
   display: grid;
-  grid-template-columns: 125px 1fr;
+  grid-template-columns: 140px 1fr;
   gap: 1.5rem;
   padding: 1.5rem;
   border-radius: 8px;
@@ -272,7 +272,7 @@ a { color: inherit; text-decoration: none; }
   text-transform: uppercase;
   color: var(--muted);
   padding-top: 0.2rem;
-  white-space: nowrap;
+  line-height: 1.5;
 }
 
 .experience-title {

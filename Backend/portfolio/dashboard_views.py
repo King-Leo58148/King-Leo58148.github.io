@@ -172,8 +172,8 @@ def save_experience(request):
     exp = get_object_or_404(Experience, pk=exp_id) if exp_id else Experience()
     exp.title = request.POST.get('title', '').strip()
     exp.company = request.POST.get('company', '').strip()
-    exp.start_date = request.POST.get('start_date', '').strip()[:4]
-    exp.end_date = request.POST.get('end_date', '').strip()
+    exp.start_date = request.POST.get('start_date', '').strip()[:20]
+    exp.end_date = request.POST.get('end_date', '').strip()[:20]
     exp.description = request.POST.get('description', '').strip()
     exp.save()
     messages.success(request, f'Experience "{exp.title}" saved.')
