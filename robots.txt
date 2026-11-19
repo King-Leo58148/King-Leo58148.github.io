@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://louissanyenni.vercel.app/sitemap.xml
