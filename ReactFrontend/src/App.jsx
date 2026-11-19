@@ -71,7 +71,12 @@ export default function App() {
         <Projects />
         <Contact contact={contact} />
         <footer className="footer">
-          <p>Built by {hero?.name}</p>
+          <p>
+            Built by {hero?.name} &middot; Design inspired by{" "}
+            <a href="https://github.com/bchiang7/v4" target="_blank" rel="noopener">
+              Brittany Chiang
+            </a>
+          </p>
         </footer>
       </main>
     </div>

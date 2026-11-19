@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { getAbout, getExperience, getProjects, getSkills } from "../api"
+import Loader from "./Loader"
 import "../detailed.css"
 
 export default function DetailedPortfolio({ hero, contact, onBack }) {
@@ -9,6 +10,7 @@ export default function DetailedPortfolio({ hero, contact, onBack }) {
   const [projects, setProjects] = useState([])
   const [activeJob, setActiveJob] = useState(0)
   const [loading, setLoading] = useState(true)
+  const [showLoader, setShowLoader] = useState(true)
 
   useEffect(() => {
     Promise.all([
@@ -37,6 +39,7 @@ export default function DetailedPortfolio({ hero, contact, onBack }) {
 
   return (
     <div className="v4-wrapper">
+      {showLoader && <Loader onFinish={() => setShowLoader(false)} />}
       <header className="v4-header">
         <button type="button" className="v4-logo" onClick={onBack} title="Back to Minimal View">
           L
@@ -189,6 +192,17 @@ export default function DetailedPortfolio({ hero, contact, onBack }) {
           {contact?.email && <a href={`mailto:${contact.email}`}>Email</a>}
         </div>
         <p>Built by {hero?.name || "Louis Aparkwon Sanyenni"}</p>
+        <p style={{ marginTop: "0.4rem", fontSize: "0.72rem" }}>
+          Design inspired by{" "}
+          <a
+            href="https://github.com/bchiang7/v4"
+            target="_blank"
+            rel="noopener"
+            style={{ color: "var(--accent)", textDecoration: "underline" }}
+          >
+            Brittany Chiang
+          </a>
+        </p>
       </footer>
     </div>
   )

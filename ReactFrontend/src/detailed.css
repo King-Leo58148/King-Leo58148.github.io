@@ -5,6 +5,46 @@
   font-family: var(--font);
 }
 
+/* LOADER */
+.v4-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: #020c1b;
+  display: grid;
+  place-items: center;
+  transition: opacity 350ms ease, visibility 350ms ease;
+}
+
+.v4-loader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.v4-loader-svg {
+  width: 88px;
+  height: 88px;
+}
+
+.v4-loader-hex {
+  stroke-dasharray: 290;
+  stroke-dashoffset: 290;
+  animation: v4DrawHex 0.85s ease forwards;
+}
+
+.v4-loader-letter {
+  opacity: 0;
+  animation: v4FadeLetter 0.4s ease 0.65s forwards;
+}
+
+@keyframes v4DrawHex {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes v4FadeLetter {
+  to { opacity: 1; }
+}
+
 .v4-header {
   position: sticky;
   top: 0;
