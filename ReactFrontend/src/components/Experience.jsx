@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
-import { getExperience } from "../api"
+import { getExperience, getCached } from "../api"
 
 export default function Experience() {
-  const [experiences, setExperiences] = useState([])
-  const [loading, setLoading] = useState(true)
+  const [experiences, setExperiences] = useState(() => getCached("experience") || [])
+  const [loading, setLoading] = useState(() => !getCached("experience"))
 
   useEffect(() => {
     getExperience()

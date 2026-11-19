@@ -6,11 +6,11 @@ import Projects from "./components/Projects"
 import Experience from "./components/Experience"
 import Contact from "./components/Contact"
 import DetailedPortfolio from "./components/DetailedPortfolio"
-import { getHero, getContact } from "./api"
+import { getHero, getContact, getCached } from "./api"
 
 export default function App() {
-  const [hero, setHero] = useState(null)
-  const [contact, setContact] = useState(null)
+  const [hero, setHero] = useState(() => getCached("hero")?.[0] || null)
+  const [contact, setContact] = useState(() => getCached("contact")?.[0] || null)
   const [detailedView, setDetailedView] = useState(
     () => window.location.hash === "#full" || new URLSearchParams(window.location.search).get("view") === "full"
   )

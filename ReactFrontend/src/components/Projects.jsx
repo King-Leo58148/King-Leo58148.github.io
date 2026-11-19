@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
-import { getProjects } from "../api"
+import { getProjects, getCached } from "../api"
 
 export default function Projects() {
-  const [projects, setProjects] = useState([])
-  const [loading, setLoading] = useState(true)
+  const [projects, setProjects] = useState(() => getCached("projects") || [])
+  const [loading, setLoading] = useState(() => !getCached("projects"))
 
   useEffect(() => {
     getProjects()

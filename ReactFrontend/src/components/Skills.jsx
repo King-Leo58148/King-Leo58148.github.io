@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
-import { getSkills } from "../api"
+import { getSkills, getCached } from "../api"
 
 export default function Skills() {
-  const [skills, setSkills] = useState([])
-  const [loading, setLoading] = useState(true)
+  const [skills, setSkills] = useState(() => getCached("skills") || [])
+  const [loading, setLoading] = useState(() => !getCached("skills"))
 
   useEffect(() => {
     getSkills()

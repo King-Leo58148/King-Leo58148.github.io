@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
-import { getAbout } from "../api"
+import { getAbout, getCached } from "../api"
 
 export default function About() {
-  const [paragraphs, setParagraphs] = useState([])
-  const [loading, setLoading] = useState(true)
+  const [paragraphs, setParagraphs] = useState(() => getCached("about") || [])
+  const [loading, setLoading] = useState(() => !getCached("about"))
 
   useEffect(() => {
     getAbout()

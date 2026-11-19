@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react"
-import { getAbout, getExperience, getProjects, getSkills } from "../api"
+import { getAbout, getExperience, getProjects, getSkills, getCached } from "../api"
 import Loader from "./Loader"
 import "../detailed.css"
 
 export default function DetailedPortfolio({ hero, contact, onBack }) {
-  const [about, setAbout] = useState([])
-  const [skills, setSkills] = useState([])
-  const [experiences, setExperiences] = useState([])
-  const [projects, setProjects] = useState([])
+  const [about, setAbout] = useState(() => getCached("about") || [])
+  const [skills, setSkills] = useState(() => getCached("skills") || [])
+  const [experiences, setExperiences] = useState(() => getCached("experience") || [])
+  const [projects, setProjects] = useState(() => getCached("projects") || [])
   const [activeJob, setActiveJob] = useState(0)
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(() => !getCached("about"))
   const [showLoader, setShowLoader] = useState(true)
 
   useEffect(() => {
