@@ -150,11 +150,13 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "https://king-leo58148.github.io",
     "https://king-leo58148-github-io.onrender.com",
+    "https://louissanyenni.vercel.app",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     "https://king-leo58148.github.io",
     "https://king-leo58148-github-io.onrender.com",
+    "https://louissanyenni.vercel.app",
 ]
 
 if RENDER_EXTERNAL_HOSTNAME:
